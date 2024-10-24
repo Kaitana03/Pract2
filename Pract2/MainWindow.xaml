@@ -1,0 +1,45 @@
+﻿<Window x:Class="Pract2.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Pract2"
+        mc:Ignorable="d"
+        Title="Nobi" Height="450" Width="800">
+    <Grid>
+        <Grid.Background>
+            <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                <GradientStop Color="Black"/>
+                <GradientStop Color="#FFB2E498" Offset="0.916"/>
+            </LinearGradientBrush>
+        </Grid.Background>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="400*"/>
+            <ColumnDefinition Width="400*"/>
+        </Grid.ColumnDefinitions>
+        <Menu VerticalAlignment="Top" Grid.ColumnSpan="2">
+            <MenuItem x:Name="info"  Header="О программе" Click="Info" />
+            <MenuItem x:Name="exit" Header="Выход" Click="Exit" />
+            <MenuItem Header="Действия">
+                <MenuItem x:Name="ореп" Header="Открыть" Click="OpenClik" />
+                <MenuItem x:Name="save" Header="Сохранить" Click="SaveClik"/>
+                <MenuItem x:Name="clear" Header="Очистить" Click="ClearClik"/>
+            </MenuItem>
+        </Menu>
+        <StackPanel Grid.Column="0" VerticalAlignment="Center">
+            <Label Content="Введите диапозон значений"/>
+            <TextBox x:Name="input_num" />
+            <Label Content="Введите желаемую длину"/>
+            <TextBox x:Name="lenght"/>
+            <Button Content="Ввод" Click="Input" />
+        </StackPanel>
+        <StackPanel Grid.Column="1" VerticalAlignment="Center">
+            <Label Content="Косинус"/>
+            <TextBlock x:Name="outputcos"/>
+            <Label Content="Массив"/>
+            <TextBlock x:Name="outputMas"/>
+        </StackPanel>
+
+
+    </Grid>
+</Window>
